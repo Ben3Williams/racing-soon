@@ -3,7 +3,7 @@
     "firstName": "Ben",
     "lastName": "Williams",
     "club": "JBR Run and Tri",
-    "picture": "https://s3-us-west-1.amazonaws.com/sfdc-demo/people/amy_taylor.jpg",
+    "picture": "src/assets/images/avatars/no-photo.png",
     "races": [
       {
         "name": "London Triathlon",
@@ -35,7 +35,7 @@
     "firstName": "Dave",
     "lastName": "Jacobs",
     "club": "JBR Run and Tri",
-    "picture": "https://s3-us-west-1.amazonaws.com/sfdc-demo/people/amy_taylor.jpg",
+    "picture": "src/assets/images/avatars/no-photo.png",
     "races": [
       {
         "name": "London Triathlon",
@@ -67,7 +67,7 @@
     "firstName": "Mark",
     "lastName": "Harding",
     "club": "JBR Run and Tri",
-    "picture": "https://s3-us-west-1.amazonaws.com/sfdc-demo/people/amy_taylor.jpg",
+    "picture": "src/assets/images/avatars/no-photo.png",
     "races": [
       {
         "name": "London Triathlon",

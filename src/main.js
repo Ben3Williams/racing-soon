@@ -1,3 +1,7 @@
+'use strict';
+
+require('./assets/scss/main.scss');
+
 // XMLHttpRequest wrapper using callbacks
 function request(obj, successHandler, errorHandler) {
     let xhr = new XMLHttpRequest();
@@ -20,16 +24,24 @@ function request(obj, successHandler, errorHandler) {
     xhr.send(obj.body);
 }
 
-request({url:"data/athletes.json"},
+request({url:"src/data/athletes.json"},
     function(data) {
         let athletes = JSON.parse(data);
         let html = "";
         athletes.forEach(function(athlete){
             html += "<div class='athlete'><img src='" + athlete.picture + "'/>" + "<p>" + athlete.firstName + " " + athlete.lastName + "</p>" + "<p>" + athlete.club + "</p><div class='races'>" + athlete.races + "</div></div>";
         });
-        document.getElementById("list").innerHTML = html;
+        document.getElementById("app").innerHTML = html;
     },
     function(error) {
         console.log(error);
     }
 );
+
+
+
+
+
+//var appContainer = document.querySelector('#app');
+
+//appContainer.innerHTML = '<div class="main-component"><h1 class="main-component__title">Welcome!</h1></div>';
