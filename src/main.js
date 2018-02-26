@@ -28,8 +28,20 @@ request({url:"src/data/athletes.json"},
     function(data) {
         let athletes = JSON.parse(data);
         let html = "";
+
         athletes.forEach(function(athlete){
-            html += "<div class='athlete'><img src='" + athlete.picture + "'/>" + "<p>" + athlete.firstName + " " + athlete.lastName + "</p>" + "<p>" + athlete.club + "</p><div class='races'>" + athlete.races + "</div></div>";
+            let races = athlete.races;
+
+            races.forEach(function(item, index, array) {
+                console.log(item);
+            })
+            
+
+
+            html += "<div class='athlete'><img src='" + athlete.picture + "'/>" + 
+            "<p>" + athlete.firstName + " " + athlete.lastName + "</p>" + "<p>" + athlete.club + 
+                "</p><div class='races'>" + races + "</div></div>";
+
         });
         document.getElementById("app").innerHTML = html;
     },
@@ -37,10 +49,6 @@ request({url:"src/data/athletes.json"},
         console.log(error);
     }
 );
-
-
-
-
 
 //var appContainer = document.querySelector('#app');
 
